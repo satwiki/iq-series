@@ -1,6 +1,6 @@
 # Episode 2 Cookbook: Building the Data Pipeline with Knowledge Sources
 
-This folder contains the hands-on cookbook for Episode 2 of The IQ Series.
+This folder contains the hands-on cookbook for Episode 2 of The Foundry IQ Series.
 
 ## 📋 Prerequisites
 
@@ -53,7 +53,7 @@ BLOB_CONTAINER_NAME=<your-container-name>
 
 **Where to find these values:** All values are available in the deployment **Outputs** tab in the Azure portal. Copy `searchEndpoint`, `openAiEndpoint`, `blobConnectionString`, and `blobContainerName` directly from the outputs.
 
-For CLI deployment and cleanup instructions, see the [Infrastructure Guide](../../infra/README.md).
+For CLI deployment and cleanup instructions, see the [Infrastructure Guide](../../../infra/README.md).
 
 ## 📓 Cookbook Notebook
 
@@ -70,7 +70,7 @@ The [**Foundry IQ Cookbook**](./foundry-iq-cookbook.ipynb) walks you through bui
 
 ### Quick Start
 
-1. Install dependencies: `pip install -U azure-search-documents==11.7.0b2 azure-identity python-dotenv`
+1. Install dependencies: `pip install -U azure-search-documents==12.1.0b1 azure-identity python-dotenv`
 2. Sign in to Azure: run `az login` in a terminal
 3. Create a `.env` file with your endpoint values (see the notebook for details)
 4. Open `foundry-iq-cookbook.ipynb` in VS Code and run the cells

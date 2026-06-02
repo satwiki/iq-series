@@ -4,7 +4,7 @@
 
 This project uses GitHub Issues to track bugs and feature requests. Please search the existing issues before filing new issues to avoid duplicates. For new issues, file your bug or feature request as a new Issue.
 
-For help and questions about using this project, please join our [Azure AI Community Discord](https://discord.gg/REmjGvvFpW) or visit the [Azure AI Foundry Developer Forum](https://aka.ms/foundry/forum).
+For help and questions about using this project, please ask in our [Discussions](https://aka.ms/iq/discussions) or visit the [Azure AI Foundry Developer Forum](https://aka.ms/foundry/forum).
 
 ## Microsoft Support Policy
 

@@ -1,6 +1,6 @@
 # Episode 3 Cookbook: Querying the Multi-Source AI Knowledge Bases
 
-This folder contains the hands-on cookbook and MCP connection guides for Episode 3 of The IQ Series.
+This folder contains the hands-on cookbook and MCP connection guides for Episode 3 of The Foundry IQ Series.
 
 ## 📋 Prerequisites
 
@@ -51,7 +51,7 @@ AOAI_GPT_DEPLOYMENT=gpt-4o-mini
 
 **Where to find these values:** All values are available in the deployment **Outputs** tab in the Azure portal.
 
-For CLI deployment and cleanup instructions, see the [Infrastructure Guide](../../infra/README.md).
+For CLI deployment and cleanup instructions, see the [Infrastructure Guide](../../../infra/README.md).
 
 ## 📓 Cookbook Notebook
 
@@ -67,7 +67,7 @@ The [**Foundry IQ Cookbook**](./foundry-iq-cookbook.ipynb) walks you through que
 
 ### Quick Start
 
-1. Install dependencies: `pip install -U azure-search-documents==11.7.0b2 azure-identity python-dotenv`
+1. Install dependencies: `pip install -U azure-search-documents==12.1.0b1 azure-identity python-dotenv`
 2. Sign in to Azure: run `az login` in a terminal
 3. Create a `.env` file with your endpoint values (see the notebook for details)
 4. Open `foundry-iq-cookbook.ipynb` in VS Code and run the cells

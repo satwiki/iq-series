@@ -38,7 +38,7 @@ body:
     attributes:
       label: "Ep 1 — fork URL"
       description: "Paste the link to your forked notebook with committed cell outputs."
-      placeholder: "https://github.com/your-username/iq-series/blob/main/1-Foundry-IQ-..."
+      placeholder: "https://github.com/your-username/iq-series/blob/main/Foundry-IQ/1-Foundry-IQ-..."
     validations:
       required: true
 
@@ -63,7 +63,7 @@ body:
     attributes:
       label: "Ep 2 — fork URL"
       description: "Paste the link to your forked notebook with committed cell outputs."
-      placeholder: "https://github.com/your-username/iq-series/blob/main/2-Foundry-IQ-..."
+      placeholder: "https://github.com/your-username/iq-series/blob/main/Foundry-IQ/2-Foundry-IQ-..."
     validations:
       required: true
 
@@ -88,7 +88,7 @@ body:
     attributes:
       label: "Ep 3 — fork URL"
       description: "Paste the link to your forked notebook with committed cell outputs."
-      placeholder: "https://github.com/your-username/iq-series/blob/main/3-Foundry-IQ-..."
+      placeholder: "https://github.com/your-username/iq-series/blob/main/Foundry-IQ/3-Foundry-IQ-..."
     validations:
       required: true
 

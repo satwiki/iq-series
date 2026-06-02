@@ -1,6 +1,6 @@
 # Episode 1 Cookbook: Unlocking Knowledge for your Agents
 
-This folder contains the hands-on cookbook for Episode 1 of The IQ Series.
+This folder contains the hands-on cookbook for Episode 1 of The Foundry IQ Series.
 
 ## 📋 Prerequisites
 
@@ -27,16 +27,15 @@ Deploy all required Azure resources with one click — this creates AI Search, A
 In the deployment form:
 
 - **Create a new resource group** (e.g., `iq-series-rg`) — click **Create new** under the Resource group field. If you've already created one for a previous episode, select it instead
-- Enter your **User Object ID** (see below)
-- Customize the resource prefix, location, and SKUs
-
-**How to get your User Object ID:** Open a terminal and run:
+- Enter your **User Object ID**: run the following in a terminal to get it:
 
 ```bash
+az login
 az ad signed-in-user show --query id -o tsv
 ```
-
 This returns your Microsoft Entra ID unique identifier — paste it into the deployment form. It's needed to assign proper RBAC roles to your account.
+
+- Customize the resource prefix, location, and SKUs
 
 After deployment, create a `.env` file **in this folder** (`1-Foundry-IQ-Unlocking-Knowledge-for-Agents/cookbook/.env`) with your values from the deployment outputs:
 
@@ -55,7 +54,7 @@ FOUNDRY_PROJECT_RESOURCE_ID=/subscriptions/<sub>/resourceGroups/<rg>/providers/M
 
 **Where to find these values:** All values except `FOUNDRY_PROJECT_RESOURCE_ID` are available in the deployment **Outputs** tab in the Azure portal. To find the project resource ID, go to [Microsoft Foundry](https://ai.azure.com) → your project → **Overview** → **Properties** and copy the full ARM resource ID.
 
-For CLI deployment and cleanup instructions, see the [Infrastructure Guide](../../infra/README.md).
+For CLI deployment and cleanup instructions, see the [Infrastructure Guide](../../../infra/README.md).
 
 ## 📓 Cookbook Notebook
 
@@ -68,12 +67,35 @@ The [**Foundry IQ Cookbook**](./foundry-iq-cookbook.ipynb) walks you through Fou
 
 ### Quick Start
 
-1. Install dependencies: `pip install -U azure-search-documents==11.7.0b2 azure-ai-projects azure-identity python-dotenv`
+1. Install dependencies: `pip install -U azure-search-documents==12.1.0b1 azure-ai-projects azure-identity python-dotenv`
 2. Sign in to Azure: run `az login` in a terminal
 3. Create a `.env` file with your endpoint values (see above)
 4. Open `foundry-iq-cookbook.ipynb` in VS Code and run the cells
 
-> **Running in GitHub Codespaces?** The devcontainer already installs all dependencies and the VS Code Jupyter extension automatically. Just open the `.ipynb` file directly in the VS Code editor — no need to install or launch a standalone Jupyter server. The notebook renders and runs natively inside VS Code.
+### Learn with Copilot
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://aka.ms/iq-series/learnwithcopilot)
+
+Launch a Codespace and start exploring Foundry IQ with GitHub Copilot. Copilot connects to your deployed knowledge base via MCP. Ask questions about your data and get grounded, cited answers.
+
+1. Click the button above to open a Codespace
+2. Open `.vscode/mcp.json` and replace the two placeholders with your values from the deployment **Outputs** tab:
+   - `<your-search-service>` → your AI Search service name
+   - `<your-search-api-key>` → your AI Search admin API key
+3. **Enable the foundry-iq tool (important!):** Open **Copilot Chat**, click the **🔧 Tools** icon at the top of the chat panel. Scroll through the tool list and find **foundry-iq** — toggle it **on**. If you skip this step, Copilot won't be able to query your knowledge base.
+4. Ask Copilot questions about your knowledge base, try these:
+
+   - *"What does Earth look like at night from space?"*
+   - *"How do scientists use nighttime lights to study urbanization?"*
+   - *"What are the brightest regions on Earth at night and why?"*
+
+5. Open any cookbook notebook and use Copilot to help you learn and experiment:
+
+   - *"Explain what this notebook does step by step"*
+   - *"What is a knowledge source vs a knowledge base?"*
+   - *"Help me create a new knowledge base with a different index"*
+
+> You can also use the repo locally. Clone the repo, open in VS Code, update `.vscode/mcp.json` with your values, and the MCP server appears in Copilot Chat Tools.
 
 ## Additional Resources
 

@@ -1,0 +1,106 @@
+name: 'Work IQ Badge Request'
+description: "Submit this issue to acknowledge completion of all 3 Work IQ episode labs."
+title: "<First Name Last Name> Work IQ Badge Request"
+labels:
+  - work-iq-badge
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### IMPORTANT: We issue badges from the [Global AI Community](https://globalai.community). Please ensure you have [signed up for an account](https://globalai.community/auth/login) to view your badge. After you submit your issue, please submit this [form](https://aka.ms/iq-series/badge-form) to initiate your badge request. This step is required as we cannot issue a badge without it. Failure to fill out the required screenshots, inputs or badge form will result in the issue being closed.
+
+  - type: checkboxes
+    attributes:
+      label: Curriculum Completion Validation
+      description: Please check this to confirm that you have completed all 3 Work IQ episode labs.
+      options:
+        - label: I verify that I have completed all 3 Work IQ episode labs end-to-end.
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Episode completion proof
+
+        For each episode: fork the repo and run all the labs. Paste the direct link to your forked repo. Screenshots must show:
+          - Lab 01: Anonymized output of the REST API request in Graph Explorer
+          - Lab 02: A screenshot of the A2A inspector with anonymized data
+
+  - type: textarea
+    id: repo_fork
+    attributes:
+      label: "Repository — fork URL"
+      description: Paste the link to your forked repository.
+      placeholder: "https://github.com/your-username/iq-series/"
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: "Ep 1 — Data, context, and tools at scale"
+      description: Please upload a screenshot of the anonymized output of the REST API request in Graph Explorer.
+      options:
+        - label: I verify that I have uploaded a screenshot of my Episode 1 lab output with the anonymized output of the REST API request in Graph Explorer.
+          required: true
+
+  - type: textarea
+    id: ep1_screenshot
+    attributes:
+      label: "Ep 1 — final output screenshot"
+      placeholder: "Drag and drop screenshot here"
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: "Ep 2 — A2A for Context-Aware, Agentic Experiences"
+      description: Please upload a screenshot of the A2A inspector with anonymized data.
+      options:
+        - label: I verify that I have uploaded a screenshot of the A2A inspector with anonymized data.
+          required: true
+
+  - type: textarea
+    id: ep2_screenshot
+    attributes:
+      label: "Ep 2 — final output screenshot"
+      placeholder: "Drag and drop screenshot here"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "---"
+
+  - type: textarea
+    id: technical_reflection
+    attributes:
+      label: Episode Insights & Key Takeaways
+      description: |
+        To verify your engagement with the series [video content](https://aka.ms/iq-series/episodes), please provide one brief, specific technical takeaway or "aha!" moment from each of the three Work IQ episodes.
+      placeholder: |
+        Episode 1: [Your insight]
+        Episode 2: [Your insight]
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Challenges or feedback
+      description: "Any blockers or steps that need clearer documentation? This helps us improve the labs."
+      placeholder: "Optional"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "---"
+
+  - type: checkboxes
+    attributes:
+      label: Badge form confirmation
+      description: "In order to receive your badge, please fill out the [Work IQ badge form](https://aka.ms/iq-series/badge-form). If you do not submit this form, you will not be eligible to receive a badge."
+      options:
+        - label: I verify that I have completed the Work IQ badge form.
+          required: true
